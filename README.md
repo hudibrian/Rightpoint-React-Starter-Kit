@@ -1,0 +1,1 @@
+# Rightpoint React Starter Kit
