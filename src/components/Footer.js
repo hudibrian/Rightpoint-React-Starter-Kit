@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Divider from 'material-ui/Divider';
-
 import TodoActions from './TodoActions';
 
 const Footer = ({ todos, currentFilter, handleFilter, handleRemoveCompleted, handleCompleteAll }) => {

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
-
+import { MuiThemeProvider } from "material-ui/styles";
 import TodoTextField from "./TodoTextField";
 
-const Header = Props => {
-  const { addTodo } = Props.actions;
+const Header = props => {
+  const { addTodo } = props.actions;
   return (
-    <div>
-      <TodoTextField onSubmit={text => addTodo(text)} />
-    </div>
+    <MuiThemeProvider>
+      <div>
+        <TodoTextField onSubmit={text => addTodo(text)} />
+      </div>
+    </MuiThemeProvider>
   );
 };
 
