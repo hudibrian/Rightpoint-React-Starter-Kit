@@ -47,7 +47,7 @@ class TodoList extends Component {
 
     return (
       <div>
-        <List>
+        <List id="todoList">
           {filteredTodos.map(todo =>
             <TodoRow
               key={todo.id}

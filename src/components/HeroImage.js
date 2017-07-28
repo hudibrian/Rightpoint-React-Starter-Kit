@@ -1,20 +1,29 @@
 import React, { Component } from "react";
+import ScrollToComponentButton from "./ScrollToComponentButton";
 
-const HeroImage = props => {
-  return (
-    <div style={styles.heroImage}>
-      <img style={{ width: "100%" }} src={props.image} />
-      <h2 style={styles.heroText}>
-        {props.text}
-      </h2>
-    </div>
-  );
-};
+class HeroImage extends Component {
+  render() {
+    return (
+      <div style={styles.heroImageContainer}>
+        <img style={styles.heroImage} src={this.props.image} />
+        <h2 style={styles.heroText}>
+          {this.props.text}
+        </h2>
+        <div style={styles.heroText}>
+          <ScrollToComponentButton callback="#todoList" />
+        </div>
+      </div>
+    );
+  }
+}
 
 const styles = {
-  heroImage: {
+  heroImageContainer: {
     width: "100%",
     height: "100vh"
+  },
+  heroImage: {
+    width: "100%"
   },
   heroText: {
     display: "flex",
