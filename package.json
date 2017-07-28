@@ -1,6 +1,6 @@
 {
   "name": "rightpoint-react-starter-demo",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,10 +14,7 @@
     "type": "git",
     "url": "https://github.com/hudibrian/Rightpoint-React-Starter-Kit"
   },
-  "keywords": [
-    "Rightpoint",
-    "starter kit"
-  ],
+  "keywords": ["Rightpoint", "starter kit"],
   "author": "Brian Hudi",
   "license": "MIT",
   "dependencies": {
