@@ -1,5 +1,5 @@
 {
-  "name": "RP-React-Starter",
+  "name": "RP-React-Starter-demo",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -8,9 +8,13 @@
     "lint": "eslint --ext js src || exit 0",
     "start": "webpack-dev-server --config webpack.config.js --progress --profile --colors"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hudibrian/Rightpoint-React-Starter-Kit"
+  },
+  "keywords": ["Rightpoint", "starter kit", ],
+  "author": "Brian Hudi",
+  "license": "MIT",
   "dependencies": {
     "formsy-material-ui": "0.5.0",
     "formsy-react": "0.18.1",
