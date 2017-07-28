@@ -1,5 +1,5 @@
 {
-  "name": "RP-React-Starter-demo",
+  "name": "Rightpoint-React-Starter-demo",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/hudibrian/Rightpoint-React-Starter-Kit"
   },
-  "keywords": ["Rightpoint", "starter kit", ],
+  "keywords": ["Rightpoint", "starter kit"],
   "author": "Brian Hudi",
   "license": "MIT",
   "dependencies": {
