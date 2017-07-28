@@ -1,11 +1,11 @@
-import types from '../actions/actionTypes';
+import types from "../actions/actionTypes";
 
 const initialState = [
   {
     id: 0,
-    text: 'This is a todo',
-    completed: false,
-  },
+    text: "This is a todo",
+    completed: false
+  }
 ];
 
 export default (state = initialState, action = {}) => {
@@ -16,21 +16,20 @@ export default (state = initialState, action = {}) => {
         {
           id: state.length,
           completed: false,
-          text: action.text,
-        },
+          text: action.text
+        }
       ];
     case types.REMOVE_TODO:
-      return state.filter(todo =>
-        todo.id !== action.id
-      );
+      return state.filter(todo => todo.id !== action.id);
     case types.COMPLETE_TODO:
-      return state.map(todo =>
-        todo.id === action.id ?
-          {
-            ...todo,
-            completed: !todo.completed,
-          } :
-          todo
+      return state.map(
+        todo =>
+          todo.id === action.id
+            ? {
+                ...todo,
+                completed: !todo.completed
+              }
+            : todo
       );
     case types.COMPLETE_ALL:
       const alreadyCompleted = state.every(({ completed }) => completed);
@@ -43,4 +42,4 @@ export default (state = initialState, action = {}) => {
     default:
       return state;
   }
-}
+};

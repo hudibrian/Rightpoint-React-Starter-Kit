@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import { List } from 'material-ui/List';
-
-import TodoRow from './TodoRow';
-import Footer from '../components/Footer';
+import React, { Component } from "react";
+import { List } from "material-ui/List";
+import TodoRow from "./TodoRow";
+import Footer from "../components/Footer";
 
 class TodoList extends Component {
   state = {
-    currentFilter: 'all',
+    currentFilter: "all"
   };
 
   handleCompleteTodo = id => {
@@ -19,7 +18,7 @@ class TodoList extends Component {
 
   handleFilter = filter => {
     this.setState({
-      currentFilter: filter,
+      currentFilter: filter
     });
   };
 
@@ -37,9 +36,9 @@ class TodoList extends Component {
 
     const filteredTodos = todos.filter(({ completed }) => {
       switch (currentFilter) {
-        case 'completed':
+        case "completed":
           return completed;
-        case 'active':
+        case "active":
           return !completed;
         default:
           return true;

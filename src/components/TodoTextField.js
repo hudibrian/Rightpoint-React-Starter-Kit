@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import TextField from 'material-ui/TextField';
+import TextField from "material-ui/TextField";
 
 class Header extends Component {
   state = {
-    text: '',
+    text: ""
   };
 
   onChange = e => {
     const { value: text } = e.target;
 
     this.setState({
-      text,
+      text
     });
   };
 
@@ -22,7 +22,7 @@ class Header extends Component {
       this.props.onSubmit(value);
 
       this.setState({
-        text: '',
+        text: ""
       });
     }
   };
@@ -43,9 +43,9 @@ class Header extends Component {
 
 const styles = {
   textField: {
-    width: '100%',
-    fontSize: 20,
-  },
+    width: "100%",
+    fontSize: 20
+  }
 };
 
 export default Header;
