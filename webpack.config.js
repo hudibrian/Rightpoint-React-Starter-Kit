@@ -3,6 +3,7 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const HOST = process.env.HOST || "localhost";
 const PORT = process.env.PORT || "7000";
@@ -28,7 +29,13 @@ module.exports = {
         test: /\.js?$/,
         exclude: /node_modules/,
         loaders: ["babel"]
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        include: path.join(__dirname, "images"),
+        loader: "url-loader?limit=30000&name=images/[name].[ext]"
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
   devServer: {
@@ -44,6 +51,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new CopyWebpackPlugin([{ from: "imgs", to: "imgs" }])
   ]
 };

@@ -30,7 +30,7 @@ const TodoActions = props => {
       </RadioButtonGroup>
       <IconButton onTouchTap={handleRemoveCompleted}>
         <FontIcon className="material-icons" color="red">
-          clear
+          delete
         </FontIcon>
       </IconButton>
       <IconButton onTouchTap={handleCompleteAll}>
