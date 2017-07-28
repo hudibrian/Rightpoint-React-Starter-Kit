@@ -1,22 +1,49 @@
+/* eslint-disable */
+
+const webpack = require("webpack");
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const HOST = process.env.HOST || "localhost";
+const PORT = process.env.PORT || "7000";
 
 module.exports = {
-  context: path.join(__dirname, "src"),
-  entry: ["./main.js"],
+  entry: [
+    "react-hot-loader/patch",
+    `webpack-dev-server/client?http://${HOST}:${PORT}`,
+    `webpack/hot/only-dev-server`,
+    `./src/index.js`
+  ],
+  devtool: "source-map",
   output: {
     path: path.join(__dirname, "dist"),
     filename: "bundle.js"
   },
+  resolve: {
+    extensions: ["", ".js"]
+  },
   module: {
-    rules: [
+    loaders: [
       {
-        test: /\.js$/,
+        test: /\.js?$/,
         exclude: /node_modules/,
-        use: ["babel-loader"]
+        loaders: ["babel"]
       }
     ]
   },
-  resolve: {
-    modules: [path.join(__dirname, "node_modules")]
-  }
+  devServer: {
+    contentBase: "./build",
+    noInfo: true,
+    hot: true,
+    inline: true,
+    historyApiFallback: true,
+    port: PORT,
+    host: HOST
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ]
 };
