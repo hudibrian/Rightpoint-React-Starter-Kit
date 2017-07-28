@@ -14,10 +14,14 @@
     "type": "git",
     "url": "https://github.com/hudibrian/Rightpoint-React-Starter-Kit"
   },
-  "keywords": ["Rightpoint", "starter kit"],
+  "keywords": [
+    "Rightpoint",
+    "starter kit"
+  ],
   "author": "Brian Hudi",
   "license": "MIT",
   "dependencies": {
+    "amdefine": "^1.0.1",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
     "babel-loader": "6.2.5",
@@ -31,12 +35,13 @@
     "eslint-plugin-react": "6.3.0",
     "formsy-material-ui": "0.5.0",
     "formsy-react": "0.18.1",
-    "html-webpack-plugin": "2.22.0",
+    "has-flag": "^2.0.0",
+    "html-webpack-plugin": "^2.29.0",
     "jest": "^20.0.4",
     "material-ui": "0.15.4",
     "prettier": "^1.5.3",
-    "react": "15.4.0",
-    "react-dom": "^15.6.1",
+    "react": "15.3.2",
+    "react-dom": "15.3.2",
     "react-hot-loader": "3.0.0-beta.5",
     "react-redux": "^4.4.5",
     "react-tap-event-plugin": "1.0.0",
