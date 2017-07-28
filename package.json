@@ -1,6 +1,6 @@
 {
   "name": "rightpoint-react-starter-demo",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,9 +25,7 @@
     "react-redux": "^4.4.5",
     "react-tap-event-plugin": "1.0.0",
     "redux": "^3.6.0",
-    "url-loader": "^0.5.9"
-  },
-  "devDependencies": {
+    "url-loader": "^0.5.9",
     "prettier": "^1.5.3",
     "babel-core": "6.17.0",
     "babel-eslint": "7.0.0",
@@ -45,5 +43,6 @@
     "redux-persist": "^4.0.0-alpha7",
     "webpack": "1.13.2",
     "webpack-dev-server": "1.16.1"
-  }
+  },
+  "devDependencies": {}
 }
